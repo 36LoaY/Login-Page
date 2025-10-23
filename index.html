@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website With Login & Registration</title>
+    <link rel="icon" href="assets/file-solid-full.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/bd764611d1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <h2>Logo</h2>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </nav>
+    <section class="login">
+      <button class="close"><i class="fa-solid fa-xmark"></i></button>
+      <div>
+        <h2>Login</h2>
+        <h6>please login to use the platform</h6>
+      </div>
+      <form action="/blank" target="_blank" method="post">
+        <div>
+          <label for="mail">Email</label>
+          <input type="text" name="mail" title="mail" />
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div>
+          <label for="pass">Password</label>
+          <input type="password" name="pass" title="pass" />
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <div class="options">
+          <div>
+            <input type="checkbox" name="chbx" title="chbx" />
+            <label for="chbx">Remember me</label>
+          </div>
+          <a>Forgot Password?</a>
+        </div>
+        <button type="submit">Login</button>
+        <p>Don't have an account? <a>Register</a></p>
+        <button><i class="fa-brands fa-google"></i> Login with Google</button>
+        <button>
+          <i class="fa-brands fa-facebook"></i> Login with Facebook
+        </button>
+      </form>
+    </section>
+    <section class="register">
+      <button class="close"><i class="fa-solid fa-xmark"></i></button>
+      <div>
+        <h2>Registration</h2>
+        <h6>Please provide the following to verify your identity</h6>
+      </div>
+      <form action="" method="get">
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input type="text" name="name" />
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="field">
+          <label for="mail">Email</label>
+          <input type="text" name="mail" title="mail" />
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div class="field">
+          <label for="pass">Password</label>
+          <input type="password" name="pass" title="pass" />
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <button type="submit">Register</button>
+        <p>Already have an account? <a>Login</a></p>
+        <button><i class="fa-brands fa-google"></i> Login with Google</button>
+        <button>
+          <i class="fa-brands fa-facebook"></i> Login with Facebook
+        </button>
+      </form>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>

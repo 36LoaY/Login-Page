@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  caret-color: white;
+  color: white;
+}
+
+html {
+  max-height: 100vh;
+  max-height: 100dvh;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  max-height: 100vh;
+  max-height: 100dvh;
+  background-image: url("assets/background.png");
+  background-size: 100% 100dvh;
+  background-repeat: no-repeat;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem 0 5rem;
+}
+
+nav h2 {
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.8em;
+}
+
+nav ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  margin: 5px 1rem;
+}
+
+nav ul li:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0px;
+  background-color: white;
+  transform-origin: right;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+}
+
+nav ul li:not(:last-child):hover::before {
+  cursor: pointer;
+  transform-origin: left;
+  -webkit-transform: scale(1, 0.9);
+  -moz-transform: scale(1, 0.9);
+  -ms-transform: scale(1, 0.9);
+  -o-transform: scale(1, 0.9);
+  transform: scale(1, 0.9);
+}
+
+nav ul li:last-child {
+  border: 2px solid white;
+  padding: 5px 30px;
+  margin: 0 2rem 0 1rem;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -ms-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+nav ul li:last-child:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+nav ul li:last-child a {
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -ms-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+nav ul li:last-child:hover a {
+  color: black;
+}
+
+.login,
+.register {
+  position: relative;
+  display: none;
+  height: 80vh;
+  width: 32%;
+  margin: 5vh auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+}
+
+.register {
+  height: 80vh;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.login > div:first-of-type {
+  margin-top: -10px;
+  margin-bottom: 35px;
+}
+
+.register > div:first-of-type {
+  margin-top: -20px;
+  margin-bottom: 60px;
+}
+
+.login a:hover,
+.register a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 35px;
+  height: 35px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  cursor: pointer;
+}
+
+.close i {
+  color: black;
+  transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -o-transform: scale(1.4);
+}
+
+.close:hover i {
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+}
+
+form {
+  position: relative;
+  height: 120%;
+  width: 130%;
+  margin-left: -15%;
+  margin-bottom: 15%;
+  margin-top: -5%;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.register form {
+  margin: 0;
+  margin-top: -50px;
+  margin-bottom: 10px;
+  height: 140%;
+  width: 100%;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  margin-top: 10px;
+  padding-bottom: 5px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px white solid;
+  outline: none;
+  font-size: 12px;
+}
+
+.register form .field {
+  padding-top: 10px;
+  margin-top: -25px;
+  margin-bottom: 20px;
+  transform: translateY(10px);
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -o-transform: translateY(10px);
+}
+
+label {
+  font-size: 12px;
+}
+
+label[for="mail"],
+label[for="name"],
+label[for="pass"] {
+  position: absolute;
+  z-index: -1;
+  margin-top: 10px;
+  transition: margin 0.2s ease;
+  -webkit-transition: margin 0.2s ease;
+  -moz-transition: margin 0.2s ease;
+  -ms-transition: margin 0.2s ease;
+  -o-transition: margin 0.2s ease;
+}
+
+input + i {
+  position: absolute;
+  right: 0%;
+  margin-top: 10px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.options label {
+  position: absolute;
+  font-size: 12px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.options input {
+  margin-top: 2px;
+  margin-right: 5px;
+}
+
+.options input:checked {
+  background-color: black;
+}
+
+button[type="submit"] {
+  border: none;
+  color: black;
+  font-weight: normal;
+  height: 30px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+button + p {
+  font-size: 12px;
+}
+
+p > a {
+  font-weight: bold;
+}
+
+.register p {
+  margin-top: -20px;
+}
+
+form button:last-child,
+form button:nth-last-child(2) {
+  height: 30px;
+  background-color: transparent;
+  border: 2px white solid;
+  color: white;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+form button:last-child:hover,
+form button:nth-last-child(2):hover {
+  background-color: rgba(255, 255, 255, 0.179);
+  backdrop-filter: blur(2500px);
+  cursor: pointer;
+}
+
+.register form button:last-child,
+.register
+  form
+  button:nth-last-child(2){
+  margin-top: -10px;
+}
+
+.register form > *:nth-last-child(-n+4) {
+    margin-bottom: 10px;
+}
